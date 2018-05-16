@@ -4,8 +4,6 @@ header ("Content-type: image/jpeg");
 
 $image = imagecreatefromjpeg("mon-image.jpg");
 
-
-
 $dimensions = getimagesize("mon-image.jpg");
 
 
@@ -30,7 +28,7 @@ $blanc = imagecolorallocate($image, 255, 255, 255);
 
 
 //imagestring($image, $police, $x, $y, $texte_a_ecrire, $couleur);
-imagestring($image, 5, $dimensions[0]/2, 0, "blabla", $blanc);
+imagestring($image, 5, $dimensions[0]/2, 0, "Julien", $blanc);
 imagejpeg($image);
 imagejpeg($image, "image.jpeg");
 
