@@ -7,9 +7,11 @@ catch(Exception $e){
     die('Erreur:'.$e->getMessage());
 }
 function listImages(){
-    $response = $GLOBALS['bdd']->prepare('SELECT * FROM img');
-    $response->excute();
-    return $response->fetchAll(PDO::FETCH_ASSOC);
-
-    var_dump(listImages);
+    $sql = "SELECT adress FROM img";
+    $response = $GLOBALS['bdd']->prepare($sql);
+    $response->execute();
+   $result = $response->fetchAll(PDO::FETCH_ASSOC);
+   var_dump($result);
+   return $result;
 }
+listImages();
