@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  mer. 16 mai 2018 à 09:59
+-- Généré le :  mer. 16 mai 2018 à 10:14
 -- Version du serveur :  10.1.31-MariaDB
 -- Version de PHP :  7.2.3
 
