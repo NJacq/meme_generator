@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="navbar">
-    <img class="logo" src="../assets/media/logo.png"> 
+    <img class="logo" src="../assets/media/logo.png">
 </div>
 
  <div class="container">
@@ -22,7 +22,15 @@
 <img src="../assets/media/cercle3blanc.png" class="rounded-circle" />
 </div>
 </div>
-</div> 
+</div>
+
+<div id="meme-preview">
+<?php
+$img_choice = "assets\media\bdd_img\banana.jpg";
+echo '<img='.$img_choice.' alt="ceci est un meme" title="meme" />';
+?>
+</div>
+
 <input type="button" class="btn btn-info" value="Valider" onclick="location.href = 'shareView.php';">
 <input type="button" class="btn btn-info" value="Retour" onclick="location.href = 'choixView.php';">
 
