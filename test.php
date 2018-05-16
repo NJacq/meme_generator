@@ -15,3 +15,5 @@ function listImages(){
    return $result;
 }
 listImages();
+
+?>

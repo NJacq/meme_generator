@@ -25,6 +25,39 @@
 </div>
 </div> 
 
+<div>
+
+<?php
+
+try {
+    $bdd = new PDO('mysql:host=localhost;dbname=generator_meme;charset=utf8' ,'root','');
+}
+catch(Exception $e){
+    die('Erreur:'.$e->getMessage());
+}
+// function listImages(){
+//     $sql = "SELECT adress FROM img";
+//     $response = $GLOBALS['bdd']->prepare($sql);
+//     $response->execute();
+   $result = $response->fetchAll(PDO::FETCH_ASSOC);
+  // var_dump($result);
+  foreach($result as $row){
+    ?>
+
+<div class="images">
+<p class="img"><
+
+
+  }
+  // return $result;
+//}
+//listImages();
+
+
+
+
+</div>
+
 <input type="button" class="btn btn-info" value="Valider" onclick="location.href = 'memegeneView.php';">
 <input type="button" class="btn btn-info" value="Retour" onclick="location.href = 'choixView.php';">
 
