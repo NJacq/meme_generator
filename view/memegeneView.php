@@ -1,3 +1,4 @@
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,17 +25,20 @@
 </div>
 </div>
 
-<!-- <div id="meme-preview">
 <?php
-$img_choice = "assets\media\bdd_img\banana.jpg";
-echo '<img='.$img_choice.' alt="ceci est un meme" title="meme" />';
+    require ('../model/model.php');
+    $image=getImage();
+
+$img_choice = $image["adress"];
+
 ?>
+
 </div> -->
 
 <form action="ttt.php" method="post">
 
-<input type="text" Label="Votre texte" placeholder="Meme Generator" name="txt-edit">
-
+<input type="text" Label="Votre texte" placeholder="Tapez votre texte" name="txt-edit">
+<input type="hidden" value= image["adress"] name="hidden">
   <select name="color">
            <option value="$orange">Orange</option>
            <option value="$bleu">Bleu</option>
@@ -53,19 +57,10 @@ echo '<img='.$img_choice.' alt="ceci est un meme" title="meme" />';
 <input type="submit">
 </form>
 
-<!-- <input type="button" class="btn btn-info" value="Valider" onclick="location.href = 'shareView.php';">
-<input type="button" class="btn btn-info" value="Retour" onclick="location.href = 'choixView.php';"> -->
-
- <?php
-    require ('../model/model.php');
-    $image=getImage();
- ?>
-
 
 <div class="mImage">
 <img src="../<?=$image["adress"]?>"witdh="300" height="300">
 </div>
-
 
 <div>
 <input type="button" class="btn btn-info" value="Générer" onclick="location.href = 'shareView.php';">

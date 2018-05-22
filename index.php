@@ -17,5 +17,5 @@ var_dump($path);
         case "meme_generator/createcré-meme":
             require('controller/image.php');
             break;
-       
+
     }
