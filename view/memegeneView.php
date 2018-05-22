@@ -26,14 +26,14 @@
 
 <!-- <div id="meme-preview">
 <?php
-$img_choice = "assets\media\bdd_img\banana.jpg";
-echo '<img='.$img_choice.' alt="ceci est un meme" title="meme" />';
+$img_choice = "../<?=$image["adress"]?>"";
+echo '<img='."../<?=$image["adress"]?>".' alt="ceci est un meme" title="meme" />';
 ?>
 </div> -->
 
 <form action="ttt.php" method="post">
 
-<input type="text" Label="Votre texte" placeholder="Meme Generator" name="txt-edit">
+<input type="text" Label="Votre texte" placeholder="Tapez votre texte" name="txt-edit">
 
   <select name="color">
            <option value="$orange">Orange</option>
