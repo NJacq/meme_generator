@@ -15,19 +15,6 @@
     <img class="logo" src="../assets/media/logo.png">
 </div>
 
-<<<<<<< HEAD
- <div class="container">
-<div class="row">
-<div class="col-12 d-flex justify-content-around">
-<img src="../assets/media/cercle1.jpg" class="rounded-circle" />
-<img src="../assets/media/cercle2blanc.png" class="rounded-circle" />
-<img src="../assets/media/cercle3blanc.png" class="rounded-circle" />
-</div>
-</div>
-</div>
-
-<div>
-=======
 <div class="container">
     <div class="row">
         <div class="col-12 d-flex justify-content-around">
@@ -39,7 +26,6 @@
 </div> 
 <form name="inscription" method="post" action="memegeneView.php">
 <div class="list">
->>>>>>> 43aee25ace090495de0736c7c6330bd5970ea9ae
 
 <?php
 

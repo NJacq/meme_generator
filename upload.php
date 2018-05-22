@@ -1,24 +1,24 @@
 <?php
 
+var_dump($_POST);
+if (isset($_POST['envoyer'])) {
 
-if (isset($_POST['submit'])) {
-   
     $file = $_FILES['file'];
-    print_r($file);    
+    print_r($file);
     $fileName = $_FILES['file']['name'];
     $fileTmpName  = $_FILES['file']['tmp_name'];
     $fileSize = $_FILES['file']['size'];
-    $fileError =$_FILES['file']['error'];   
+    $fileError =$_FILES['file']['error'];
     $fileType = $_FILES['file']['type'];
     $fileExtension = explode('.',$fileName);
     $fileActualExt = strtolower(end($fileExtension));
-
+var_dump($fileActualExt);
     $allowed = array('jpeg','jpg','png'); // Get all the file extensions
-    // $uploadPath = $currentDir . $uploadDirectory . basename($fileName); 
+    // $uploadPath = $currentDir . $uploadDirectory . basename($fileName);
 
-    
 
-        if (!  in_array($fileActualExt,$allowed)) {
+
+        if (in_array($fileActualExt,$allowed)) {
             if ($fileError === 0){
                 if($fileSize <2000000){
                     $fileNameNew = uniqid('', true).".".$fileActualExt;
@@ -36,4 +36,4 @@ if (isset($_POST['submit'])) {
             echo "Vous ne pouvez pas importer ce type de fichier!";
 
         }
-   
+    }
