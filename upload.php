@@ -1,5 +1,10 @@
 <?php
 
+
+// Commande UPLOAD !!
+
+session_start();
+
 var_dump($_POST);
 if (isset($_POST['envoyer'])) {
 
@@ -12,19 +17,15 @@ if (isset($_POST['envoyer'])) {
     $fileType = $_FILES['file']['type'];
     $fileExtension = explode('.',$fileName);
     $fileActualExt = strtolower(end($fileExtension));
-var_dump($fileActualExt);
-    $allowed = array('jpeg','jpg','png'); // Get all the file extensions
-    // $uploadPath = $currentDir . $uploadDirectory . basename($fileName);
-
-
+    $allowed = array('jpeg','jpg','png');
 
         if (in_array($fileActualExt,$allowed)) {
             if ($fileError === 0){
-                if($fileSize <2000000){
+                if($fileSize <1000000){
                     $fileNameNew = uniqid('', true).".".$fileActualExt;
-                    $fileDestination = 'upload/'.$fileNameNew;
+                    $_SESSION['url']= $fileDestination = 'upload/'.$fileNameNew;
                     move_uploaded_file($fileTmpName, $fileDestination);
-                    header("Location: choixuploadView.php?uploadsuccess");
+                    header("Location: view/memegeneView.php");
                 }else{
                     echo "Le fichier est trop volumineux!";
                 }

@@ -1,20 +1,47 @@
 <?php
+session_start();
 
-
-$img_choice = $_POST["hidden"];
-
-var_dump($_POST["hidden"]);
-$createdImage = imagecreatefromjpeg("$img_choice");
-
-$dimensions = getimagesize($img_choice);
+$imageView = getImage($_SESSION['choixImage']);
+$createdImage = imagecreatefromjpeg($_SERVER['DOCUMENT_ROOT'].'/meme_generator/'.$imageView['adress']);
+$dimensions = getimagesize();
 
 
 // définition des couleurs utilisée
-$orange = imagecolorallocate($createdImage, 255, 128, 0);
-$bleu = imagecolorallocate($createdImage, 0, 0, 255);
-$bleuclair = imagecolorallocate($createdImage, 156, 227, 254);
-$noir = imagecolorallocate($createdImage, 0, 0, 0);
-$blanc = imagecolorallocate($createdImage, 255, 255, 255);
+switch($_POST['color']){
+    case 'orange' : 
+        $color = imagecolorallocate($createdImage, 255, 128, 0);
+        break;
+
+
+
+    case 'bleu' : 
+    $color = imagecolorallocate($createdImage, 0, 0, 255);
+    break;
+
+
+
+    case 'bleuclair' : 
+    $color = imagecolorallocate($createdImage, 156, 227, 254);
+    break;
+
+
+
+    case 'noir' : 
+    $color = imagecolorallocate($createdImage, 0, 0, 0);
+    break;
+
+
+
+    default : 
+    $color = imagecolorallocate($createdImage, 255, 255, 255);
+    break;
+
+}
+
+
+
+
+
 
 // permet de connaitre la longueur et largeur des images
 //$largeur_destination = imagesx($destination);
@@ -30,9 +57,7 @@ $blanc = imagecolorallocate($createdImage, 255, 255, 255);
 
 
 //imagestring($image, $police, $x, $y, $texte_a_ecrire, $couleur);
-imagestring($createdImage, $_POST['size'], $dimensions[0]/2, 0, $_POST['txt-edit'], $_POST['color']);
+imagestring($createdImage, $_POST['size'], $dimensions[0]/2, 0, $_POST['txt-edit'], $color);
 imagejpeg($createdImage);
 imagejpeg($createdImage, "image.jpeg");
-var_dump($_POST['size']);
-
 ?>

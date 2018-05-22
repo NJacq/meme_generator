@@ -23,27 +23,24 @@
             <img src="../assets/media/cercle3blanc.png" class="rounded-circle" />
         </div>
     </div>
-</div> 
+</div>
 <form name="inscription" method="post" action="memegeneView.php">
 <div class="list">
 
 <?php
 
-require('../model/model.php');
-
-$response = getImages();
-
-$images=$response->fetchAll(PDO::FETCH_ASSOC);
 foreach($images as $row){
 
 ?>
 
 <div class="images">
-    <p><a href="../view/memegeneView.php?id=<?= $row["id"]?>"><img src="../<?=$row["adress"]?>"style="cursor:pointer" witdh="300" height="300"></a></p>
+    <p><a href="../controller/memegen.php?id=<?= $row["id"]?>"><img src="../<?=$row["adress"]?>" style="cursor:pointer" witdh="300" height="300"></a></p>
 </div>
 
- 
+
 <?php
+
+
 
   }
 
@@ -51,9 +48,9 @@ foreach($images as $row){
 
   ?>
 
-  
 
-<p id="list"></p>  
+
+<p id="list"></p>
 
 <div>
     <input type="button" class="btn btn-info" value="Retour" onclick="location.href = 'choixView.php';">

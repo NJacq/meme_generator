@@ -1,12 +1,20 @@
-<?php 
+<?php
+
+session_start();
+$_SESSION['choixImage']=$_GET['id'];
+//var_dump($_SESSION['choixImage']);
+require ('../model/model.php');
+$image=getImage($_SESSION['choixImage']);
+$url=$image['adress'];
+$img_choice = $image["adress"];
 
 
-    require('model/model.php');
-    $imageView = getImage();
+
+       $imageView = getImage($_SESSION['choixImage']);
+echo "coucou";
+var_dump($imageView);
+
+    require('../view/memegeneView.php');
 
 
- 
-    require('view/memegeneView.php');
-
-  
 

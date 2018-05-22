@@ -1,4 +1,3 @@
-```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,25 +24,21 @@
 </div>
 </div>
 
-<?php
-    require ('../model/model.php');
-    $image=getImage();
 
-$img_choice = $image["adress"];
 
-?>
+</div>
 
-</div> -->
+<form action="generVis.php" method="post">
 
 
 <input type="text" Label="Votre texte" placeholder="Tapez votre texte" name="txt-edit">
-<input type="hidden" value= image["adress"] name="hidden">
+
   <select name="color">
-           <option value="$orange">Orange</option>
-           <option value="$bleu">Bleu</option>
-           <option value="$bleuclair">Bleu clair</option>
-           <option value="$noir">Noir</option></option>
-           <option value="$blanc">Blanc</option>
+           <option value="orange">Orange</option>
+           <option value="bleu">Bleu</option>
+           <option value="bleuclair">Bleu clair</option>
+           <option value="noir">Noir</option></option>
+           <option value="blanc">Blanc</option>
        </select>
 
          <select name="size">
@@ -57,7 +52,8 @@ $img_choice = $image["adress"];
 </form>
 
 <div class="mImage">
-<img src="../<?=$image["adress"]?>"witdh="300" height="300">
+<img src="../<?=$url?>"witdh="300" height="300">
+
 </div>
 
 <div>

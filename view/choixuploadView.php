@@ -27,7 +27,7 @@
 
 <form method="POST" action="../upload.php" enctype="multipart/form-data">
      <!-- On limite le fichier à 100Ko -->
-     <input type="hidden" name="MAX_FILE_SIZE" value="100000">
+     <input type="hidden" name="MAX_FILE_SIZE" value="1000000">
 <div class="fileUpload">
 <span class="custom-span"> <img src="../assets/media/upload.png" height="100" width="100" >
 </span>
