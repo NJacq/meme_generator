@@ -1,7 +1,7 @@
 <?php
 
-
-if (isset($_POST['submit'])) {
+var_dump($_POST);
+if (isset($_POST['envoyer'])) {
 
     $file = $_FILES['file'];
     print_r($file);
@@ -12,13 +12,13 @@ if (isset($_POST['submit'])) {
     $fileType = $_FILES['file']['type'];
     $fileExtension = explode('.',$fileName);
     $fileActualExt = strtolower(end($fileExtension));
-
+var_dump($fileActualExt);
     $allowed = array('jpeg','jpg','png'); // Get all the file extensions
     // $uploadPath = $currentDir . $uploadDirectory . basename($fileName);
 
 
 
-        if (!  in_array($fileActualExt,$allowed)) {
+        if (in_array($fileActualExt,$allowed)) {
             if ($fileError === 0){
                 if($fileSize <2000000){
                     $fileNameNew = uniqid('', true).".".$fileActualExt;
