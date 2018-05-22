@@ -18,7 +18,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12 d-flex justify-content-around">
-            <img src="../assets/media/cercle1.jpg" class="rounded-circle">      
+            <img src="../assets/media/cercle1.png" class="rounded-circle">      
             <img src="../assets/media/cercle2blanc.png" class="rounded-circle">      
             <img src="../assets/media/cercle3blanc.png" class="rounded-circle">
         </div>

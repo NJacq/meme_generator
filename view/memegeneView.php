@@ -17,29 +17,27 @@
  <div class="container">
 <div class="row">
 <div class="col-12 d-flex justify-content-around">
-<img src="../assets/media/cercle1.jpg" class="rounded-circle" />
+<img src="../assets/media/cercle1.png" class="rounded-circle" />
 <img src="../assets/media/cercle2.png"  class="rounded-circle" />
 <img src="../assets/media/cercle3blanc.png" class="rounded-circle" />
 </div>
 </div>
 </div>
 
-<div id="meme-preview">
-<!-- <?php
-$img_choice = "assets\media\bdd_img\banana.jpg";
-echo '<img='.$img_choice.' alt="ceci est un meme" title="meme" />';
-?> -->
-    <?php
-    if(isset($_POST['id'])){ 
-    echo $_POST['id'];
-    }
-    ?>
-<div class="list">
+
+ <?php
+    require ('../model/model.php');
+    $image=getImage();
+ ?>
+
+
+<div class="mImage">
+<img src="../<?=$image["adress"]?>"witdh="300" height="300">
 </div>
 
 
 <div>
-<input type="button" class="btn btn-info" value="Valider" onclick="location.href = 'shareView.php';">
+<input type="button" class="btn btn-info" value="Générer" onclick="location.href = 'shareView.php';">
 <input type="button" class="btn btn-info" value="Retour" onclick="location.href = 'choixView.php';">
 </div>
 </body>

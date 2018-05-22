@@ -18,14 +18,33 @@
  <div class="container">
 <div class="row">
 <div class="col-12 d-flex justify-content-around">
-<img src=src="../assets/media/cercle1.jpg"  class="rounded-circle" />
+<img src="../assets/media/cercle1.png"  class="rounded-circle" />
 <img src="../assets/media/cercle2blanc.png" class="rounded-circle" />
 <img src="../assets/media/cercle3blanc.png" class="rounded-circle" />
 </div>
 </div>
-</div> 
+</div>
+
+<form method="POST" action="../upload.php" enctype="multipart/form-data">
+     <!-- On limite le fichier à 100Ko -->
+     <input type="hidden" name="MAX_FILE_SIZE" value="100000">
+<div class="fileUpload">
+<span class="custom-span"> <img src="../assets/media/upload.png" height="100" width="100" >
+</span>
+<p class="custom-para">Ajouter une photo</p>
+<input id="uploadBtn" type="file" class="upload" name="file" />
+</div>
+<input id="uploadFile" placeholder="Aucun fichier sélectionné" disabled="disabled" />
+<input type="submit" name="envoyer" value="Envoyer le fichier">
+</form>
+<script type="text/javascript">
+document.getElementById("uploadBtn").onchange = function () {
+document.getElementById("uploadFile").value = this.value;
+};
+</script>
+
+
 <div>
-<input type="button" class="btn btn-info" value="Valider" onclick="location.href = 'memegeneView.php';">
 <input type="button" class="btn btn-info" value="Retour" onclick="location.href = 'choixView.php';">
 </div>
 </body>
