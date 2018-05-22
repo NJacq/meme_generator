@@ -24,15 +24,37 @@
 </div>
 </div>
 
-<div id="meme-preview">
+<!-- <div id="meme-preview">
 <?php
 $img_choice = "assets\media\bdd_img\banana.jpg";
 echo '<img='.$img_choice.' alt="ceci est un meme" title="meme" />';
 ?>
-</div>
+</div> -->
 
-<input type="button" class="btn btn-info" value="Valider" onclick="location.href = 'shareView.php';">
-<input type="button" class="btn btn-info" value="Retour" onclick="location.href = 'choixView.php';">
+<form action="ttt.php" method="post">
+
+<input type="text" Label="Votre texte" placeholder="Meme Generator" name="txt-edit">
+
+  <select name="color">
+           <option value="$orange">Orange</option>
+           <option value="$bleu">Bleu</option>
+           <option value="$bleuclair">Bleu clair</option>
+           <option value="$noir">Noir</option></option>
+           <option value="$blanc">Blanc</option>
+       </select>
+
+         <select name="size">
+           <option value="1">Trés petit</option>
+           <option value="2">Petit</option>
+           <option value="3">Moyen</option>
+           <option value="4">Grand</option></option>
+           <option value="5">Trés grand</option>
+       </select>
+<input type="submit">
+</form>
+
+<!-- <input type="button" class="btn btn-info" value="Valider" onclick="location.href = 'shareView.php';">
+<input type="button" class="btn btn-info" value="Retour" onclick="location.href = 'choixView.php';"> -->
 
 </body>
 </html>

@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="navbar">
-    <img class="logo" src="../assets/media/logo.png"> 
+    <img class="logo" src="../assets/media/logo.png">
 </div>
 <p><img src="../assets/media/exemple_meme/ex-meme.jpg"></p>
 <div class="exempleImg"></div>
