@@ -24,14 +24,17 @@
 </div>
 </div>
 
-<!-- <div id="meme-preview">
 <?php
-$img_choice = "../<?=$image["adress"]?>"";
-echo '<img='."../<?=$image["adress"]?>".' alt="ceci est un meme" title="meme" />';
-?>
-</div> -->
+    require ('../model/model.php');
+    $image=getImage();
 
-<form action="ttt.php" method="post">
+$img_choice = $image["adress"];
+
+// echo "<img src='.$img_choice.'/>";
+?>
+
+
+<form action="../ttt.php" method="post">
 
 <input type="text" Label="Votre texte" placeholder="Tapez votre texte" name="txt-edit">
 
@@ -52,15 +55,6 @@ echo '<img='."../<?=$image["adress"]?>".' alt="ceci est un meme" title="meme" />
        </select>
 <input type="submit">
 </form>
-
-<!-- <input type="button" class="btn btn-info" value="Valider" onclick="location.href = 'shareView.php';">
-<input type="button" class="btn btn-info" value="Retour" onclick="location.href = 'choixView.php';"> -->
-
- <?php
-    require ('../model/model.php');
-    $image=getImage();
- ?>
-
 
 <div class="mImage">
 <img src="../<?=$image["adress"]?>"witdh="300" height="300">

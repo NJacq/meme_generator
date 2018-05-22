@@ -1,20 +1,20 @@
 <?php
 
+include(memegeneView.php);
 
 
-header ("Content-type: image/jpeg");
 
-$image = imagecreatefromjpeg("mon-image.jpg");
+$createdImage = imagecreatefromjpeg("$img_choice");
 
-$dimensions = getimagesize("mon-image.jpg");
+$dimensions = getimagesize("$img_choice");
 
 
 // définition des couleurs utilisée
-$orange = imagecolorallocate($image, 255, 128, 0);
-$bleu = imagecolorallocate($image, 0, 0, 255);
-$bleuclair = imagecolorallocate($image, 156, 227, 254);
-$noir = imagecolorallocate($image, 0, 0, 0);
-$blanc = imagecolorallocate($image, 255, 255, 255);
+$orange = imagecolorallocate($createdImage, 255, 128, 0);
+$bleu = imagecolorallocate($createdImage, 0, 0, 255);
+$bleuclair = imagecolorallocate($createdImage, 156, 227, 254);
+$noir = imagecolorallocate($createdImage, 0, 0, 0);
+$blanc = imagecolorallocate($createdImage, 255, 255, 255);
 
 // permet de connaitre la longueur et largeur des images
 //$largeur_destination = imagesx($destination);
@@ -30,8 +30,9 @@ $blanc = imagecolorallocate($image, 255, 255, 255);
 
 
 //imagestring($image, $police, $x, $y, $texte_a_ecrire, $couleur);
-imagestring($image, $_POST['size'], $dimensions[0]/2, 0, $_POST['text'], $_POST['color']);
-imagejpeg($image);
-imagejpeg($image, "image.jpeg");
+imagestring($createdImage, $_POST['size'], $dimensions[0]/2, 0, $_POST['txt-edit'], $_POST['color']);
+imagejpeg($createdImage);
+imagejpeg($createdImage, "image.jpeg");
+var_dump($_POST['size']);
 
 ?>
