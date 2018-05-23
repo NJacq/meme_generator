@@ -9,23 +9,23 @@ body{
         margin-left : 30px;
         align-items: center;
         justify-content: center;
-       
+
     }
     button, select {
         text-transform: none;
         margin-top: 20px;
-      
+
 
     }
     img.mImage{
         width : 200px;
     }
-    
- 
+
+
     body{
         align-items: center;
         justify-content: center;
-      
+
     }
     .rounded-circle{
         width: 50px;
@@ -62,7 +62,7 @@ body{
         width : 100px;
         height : 40px;
         margin-bottom : 5px;
-       
+
     }
     .btn{
         margin-left : 70px;
