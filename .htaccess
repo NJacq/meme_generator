@@ -1,3 +1,7 @@
 RewriteEngine On
 RewriteRule    ^meme_generator/$    index.php?action=accueil [L]
-RewriteRule    ^choixView/$ index.php?action=choix [L]
+RewriteRule    ^choixView$    index.php?action=choix [L]
+RewriteRule    ^generVis$    index.php?action=visualisation [L]
+RewriteRule    ^memegen$    index.php?action=generateur [L]
+RewriteRule    ^share$    index.php?action=share [L]
+
