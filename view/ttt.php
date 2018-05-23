@@ -7,8 +7,6 @@ $imageView = getImage($_SESSION['choixImage']);
 $pass=str_replace('\\', '/', $_SERVER['DOCUMENT_ROOT'].'/meme_generator/'.$imageView['adress']);
 $createdImage = imagecreatefromjpeg($pass);
 $dimensions = getimagesize();
-
-
 // définition des couleurs utilisée
 switch($_POST['color']){
     case 'orange' :
@@ -43,7 +41,7 @@ switch($_POST['color']){
 
 imagestring($createdImage, $_POST['size'], $dimensions[0]/2, 0, $_POST['txt-edit'], $color);
 $imageName = tempName($_SERVER['DOCUMENT_ROOT'].'/meme_generator/assets/media/tmp', "img");
-$save = $_SERVER['DOCUMENT_ROOT'].'/meme_generator/assets/media/tmp'. strtolower($createdImage) .".jpeg";
+$save = $_SERVER['DOCUMENT_ROOT'].'/meme_generator/assets/media/tmp'. time() .".jpg";
 
 imagejpeg($createdImage, $save);
 imagejpeg($createdImage);
