@@ -9,9 +9,5 @@ $twig = new Twig_Environment($loader, array(
 
 require('model/model.php');
 
-$template = $twig->load('accueilView.html');
+$template = $twig->load('choixuploadView.html');
 echo $template->render(array());
-
-
-
-
