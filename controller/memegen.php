@@ -11,7 +11,7 @@ $img_choice = $image["adress"];
 
 
        $imageView = getImage($_SESSION['choixImage']);
-echo "coucou";
+
 var_dump($imageView);
 
     require('../view/memegeneView.php');
