@@ -12,7 +12,7 @@ case 'accueil':
 require_once('controller/accueil.php');
 break;
 
-case 'choixView':
+case 'choix':
 require_once('controller/choixView.php');
 
 break;
@@ -27,8 +27,8 @@ require_once('controller/memegen.php');
 
 break;
 
-case 'list':
-require_once('controller/list.php');
+case 'share':
+require_once('controller/share.php');
 
 break;
 
