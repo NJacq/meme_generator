@@ -1,8 +1,11 @@
 <?php
 session_start();
+header ("Content-type: image/jpg");
+
 
 $imageView = getImage($_SESSION['choixImage']);
-$createdImage = imagecreatefromjpeg($_SERVER['DOCUMENT_ROOT'].'/meme_generator/'.$imageView['adress']);
+$pass=str_replace('\\', '/', $_SERVER['DOCUMENT_ROOT'].'/meme_generator/'.$imageView['adress']);
+$createdImage = imagecreatefromjpeg($pass);
 $dimensions = getimagesize();
 
 
@@ -41,8 +44,6 @@ switch($_POST['color']){
 
 
 
-
-
 // permet de connaitre la longueur et largeur des images
 //$largeur_destination = imagesx($destination);
 //$hauteur_destination = imagesy($destination);
@@ -58,6 +59,7 @@ switch($_POST['color']){
 
 //imagestring($image, $police, $x, $y, $texte_a_ecrire, $couleur);
 imagestring($createdImage, $_POST['size'], $dimensions[0]/2, 0, $_POST['txt-edit'], $color);
+$image_path = "/www/html/images_dyn/CACHE_png1/".$texte_encode.".png";
 imagejpeg($createdImage);
-imagejpeg($createdImage, "image.jpeg");
+imagejpeg($createdImage, $gi);
 ?>

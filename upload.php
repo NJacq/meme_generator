@@ -25,7 +25,7 @@ if (isset($_POST['envoyer'])) {
                     $fileNameNew = uniqid('', true).".".$fileActualExt;
                     $_SESSION['url']= $fileDestination = 'upload/'.$fileNameNew;
                     move_uploaded_file($fileTmpName, $fileDestination);
-                    header("Location: view/memegeneView.php");
+                    header("Location: ../view/memegeneView.php");
                 }else{
                     echo "Le fichier est trop volumineux!";
                 }
