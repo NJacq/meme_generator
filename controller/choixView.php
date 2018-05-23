@@ -1,8 +1,19 @@
 <?php
+
+require_once 'vendor/autoload.php';
+
 session_start();
+
+$loader = new Twig_Loader_Filesystem('view');
+$twig = new Twig_Environment($loader, array(
+    'cache' => false,
+));
+
+
 require('model/model.php');
 
-$response = getImages();
-$images=$response->fetchAll(PDO::FETCH_ASSOC);
+$template = $twig->load('choixbddView.php');
+echo $template->render(array());
 
-require('view/choixbddView.php');
+
+
