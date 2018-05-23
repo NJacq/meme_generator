@@ -32,6 +32,11 @@ require_once('controller/share.php');
 
 break;
 
+case 'list':
+require_once('controller/list.php');
+
+break;
+
 
 
 
