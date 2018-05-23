@@ -1,7 +1,7 @@
 {% extends "main.html" %}
 
 {% block content %}
-<form action="generVis" method="post">
+<form class="formulaire" action="generVis" method="post">
 <input id="textImage" type="text" Label="Votre texte" placeholder="Tapez votre texte" name="txt-edit">
 <input type="hidden" value= image["adress"] name= "hidden">
   <select name="color">
@@ -21,11 +21,11 @@
 
 
        </select>
-<input type="submit">
-</form>
+<input class="btn-info" type="submit">
+
 
 <div class="mImage">
-<img src="{{displayImage.adress}}"witdh="300" height="300">
+<img src="{{displayImage.adress}}" witdh="300" height="300">
 
 </div>
 
@@ -35,7 +35,7 @@
 </div>
 
 
-
+</form>
 <script>
 
 var textImage = document.querySelector("#textImage");

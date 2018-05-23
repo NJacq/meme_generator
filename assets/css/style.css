@@ -2,10 +2,30 @@ body{
     margin: 0;
 }
 @media only screen and (max-width: 600px){
+    div.row{
+       margin-right : 5px;
+    }
+    .formulaire{
+        margin-left : 30px;
+        align-items: center;
+        justify-content: center;
+       
+    }
+    button, select {
+        text-transform: none;
+        margin-top: 20px;
+      
+
+    }
+    img.mImage{
+        width : 200px;
+    }
+    
+ 
     body{
         align-items: center;
         justify-content: center;
-        padding : 0;
+      
     }
     
     img.logo{
@@ -23,10 +43,20 @@ body{
         padding-top : 5px;
 
     }
+    .btn-info {
+        color: #fff;
+        background-color: #17a2b8;
+        border-color: #17a2b8;
+        width : 100px;
+        height : 40px;
+        margin-bottom : 5px;
+       
+    }
     .btn{
         margin-left : 70px;
         display: flex;
         justify-content: center;
+        padding : 20px;
     }
     img{
         width : 100px; 
