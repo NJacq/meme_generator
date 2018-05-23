@@ -12,7 +12,7 @@ $twig = new Twig_Environment($loader, array(
 
 require('model/model.php');
 
-$template = $twig->load('choixbddView.php');
+$template = $twig->load('choixbddView.html');
 echo $template->render(array());
 
 
