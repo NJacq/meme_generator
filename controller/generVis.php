@@ -1,8 +1,4 @@
 <?php
-require('../model/model.php');
+require('model/model.php');
 
-
-var_dump($_POST);
-
-
-require('../view/ttt.php');
+require('view/ttt.php');
