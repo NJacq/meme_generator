@@ -1,6 +1,6 @@
 <?php
 require('model/model.php');
 
-require('view/accueilView.php');
+require('view/accueilView.html');
 
 ?>
