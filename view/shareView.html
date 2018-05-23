@@ -11,7 +11,11 @@
 </head>
 <body>
 <div class="navbar">
+<<<<<<< HEAD
+    <img class="logo" src="../assets/media/logo.png">
+=======
     <img class="logo" src="assets/media/logo.png"> 
+>>>>>>> c31eed51b57f80bdd6d5fd6d81251582ff9f8fcb
 </div>
 
 <div class="container">
@@ -22,7 +26,7 @@
 <img src="assets/media/cercle3blanc.png" class="rounded-circle" />
 </div>
 </div>
-</div> 
+</div>
 
 <h2>Partage ton même</h2>
 
@@ -32,7 +36,11 @@
 <div class="container">
     <div class="row">
         <div class="col-12 d-flex justify-content-around">
+<<<<<<< HEAD
+            <a href="https://www.facebook.com/sharer.php?u=<?= $lien ?>&t=<?= $titre ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;"><img src="../assets/media/logo_facebook.png" class="facebook"></a>
+=======
             <a href="https://www.facebook.com/sharer.php?u=<?= $lien ?>&t=<?= $titre ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;"><img src="assets/media/logo_facebook.png" class="facebook"></a>            
+>>>>>>> c31eed51b57f80bdd6d5fd6d81251582ff9f8fcb
 
             <a href="https://twitter.com/share?url=<?= $lien ?>&t=<?= $titre ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;"><img src="assets/media/logo_twitter.png" class="twitter"></a>
             <a href="download.php?filename=CIMG1026.JPG"><img src="assets/media/download.png" class="download"/></a>
