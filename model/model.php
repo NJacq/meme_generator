@@ -12,7 +12,7 @@ function getImage($idimage)
 {
     $db = new PDO('mysql:host=localhost;dbname=generator_meme;charset=utf8' ,'root','');
 
-    $image = $db->prepare('SELECT id, adress FROM img');
+    $image = $db->prepare('SELECT id, adress FROM img WHERE id=:id');
     $choix = $idimage;
     $image->bindParam(":id", $choix,PDO::PARAM_INT);
     $image->execute();
