@@ -12,7 +12,7 @@ case 'accueil':
 require_once('controller/accueil.php');
 break;
 
-case 'choix':
+case 'choixView':
 require_once('controller/choixView.php');
 
 break;
@@ -36,9 +36,9 @@ break;
 
 
 
-default:
+// default:
 
-require_once('error.html');
+// require_once('error.html');
 
 
 }
