@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<base href="http://localhost/meme_generator/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -24,7 +25,7 @@
         </div>
     </div>
 </div>
-<form name="inscription" method="post" action="memegeneView.php">
+<form name="inscription" method="post" action="memegeneView">
 <div class="list">
 
 <?php
@@ -34,7 +35,7 @@ foreach($images as $row){
 ?>
 
 <div class="images">
-    <p><a href="controller/memegen.php?id=<?= $row["id"]?>"><img src="<?=$row["adress"]?>" style="cursor:pointer" witdh="300" height="300"></a></p>
+    <p><a href="memegen/<?= $row["id"]?>/"><img src="<?=$row["adress"]?>" style="cursor:pointer" witdh="300" height="300"></a></p>
 </div>
 
 
@@ -53,7 +54,7 @@ foreach($images as $row){
 <p id="list"></p>
 
 <div>
-    <input type="button" class="btn btn-info" value="Retour" onclick="location.href = 'choixView.php';">
+    <input type="button" class="btn btn-info" value="Retour" onclick="location.href = 'choixView';">
 </div>
 
 

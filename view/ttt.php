@@ -1,12 +1,11 @@
 <?php
 session_start();
-header ("Content-type: image/jpg");
 
 
 $imageView = getImage($_SESSION['choixImage']);
 $pass=str_replace('\\', '/', $_SERVER['DOCUMENT_ROOT'].'/meme_generator/'.$imageView['adress']);
 $createdImage = imagecreatefromjpeg($pass);
-$dimensions = getimagesize();
+$dimensions = getimagesize($pass);
 // définition des couleurs utilisée
 switch($_POST['color']){
     case 'orange' :
@@ -40,8 +39,11 @@ switch($_POST['color']){
 }
 
 imagestring($createdImage, $_POST['size'], $dimensions[0]/2, 0, $_POST['txt-edit'], $color);
-$imageName = tempName($_SERVER['DOCUMENT_ROOT'].'/meme_generator/assets/media/tmp', "img");
-$save = $_SERVER['DOCUMENT_ROOT'].'/meme_generator/assets/media/tmp'. time() .".jpg";
+$droot = $_SERVER['DOCUMENT_ROOT']."/meme_generator/";
+$pct = 'assets/media/tmp/'. time() .".jpg";
+$save = $droot.$pct;
+var_dump($save);
 
 imagejpeg($createdImage, $save);
-imagejpeg($createdImage);
+
+echo "<img src=".$pct.">";
