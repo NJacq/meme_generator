@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule    ^meme_generator/$    index.php?action=accueil [L]
+RewriteRule    ^choixView/$ index.php?action=choix [L]
