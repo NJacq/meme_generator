@@ -41,25 +41,9 @@ switch($_POST['color']){
 
 }
 
-
-
-
-// permet de connaitre la longueur et largeur des images
-//$largeur_destination = imagesx($destination);
-//$hauteur_destination = imagesy($destination);
-
-//$x = $largeur_destination/2;
-//$y = 0;
-
-//$police =2;
-//$couleur = $blanc;
-//$texte_a_ecrire = "test";
-// permet d'écrire sur l'image
-
-
-//imagestring($image, $police, $x, $y, $texte_a_ecrire, $couleur);
 imagestring($createdImage, $_POST['size'], $dimensions[0]/2, 0, $_POST['txt-edit'], $color);
-$image_path = "/www/html/images_dyn/CACHE_png1/".$texte_encode.".png";
+$imageName = tempName($_SERVER['DOCUMENT_ROOT'].'/meme_generator/assets/media/tmp', "img");
+$save = $_SERVER['DOCUMENT_ROOT'].'/meme_generator/assets/media/tmp'. strtolower($createdImage) .".jpeg";
+
+imagejpeg($createdImage, $save);
 imagejpeg($createdImage);
-imagejpeg($createdImage, $gi);
-?>

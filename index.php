@@ -1,21 +1,49 @@
 <?php
 
-$path = $_SERVER['REQUEST_URI'];
-var_dump($path);
+//Rounting
 
-    switch ($path){
-        case "meme_generator/accueil":
-        require('controller/accueil.php');
-        break;
-        case "meme_generator/choix1":
-        require('controller/list.php');
-        break;
+if (isset($_GET['action'])){
 
-        case "meme_generator/choix2":
-        require('controller/list.php');
-        break;
-        case "meme_generator/createcré-meme":
-            require('controller/image.php');
-            break;
+switch ($_GET['action']) {
 
-    }
+//routeur
+
+case 'accueil':
+require_once('controller/accueil.php');
+break;
+
+case 'choixView':
+require_once('controller/choixView.php');
+
+break;
+
+case 'visualisation':
+require_once('controller/generVis.php');
+
+break;
+
+case 'generateur':
+require_once('controller/memegen.php');
+
+break;
+
+case 'list':
+require_once('controller/list.php');
+
+break;
+
+
+
+
+
+// default:
+
+// require_once('error.html');
+
+
+}
+} else {
+require_once('controller/accueil.php');
+}
+
+?>
