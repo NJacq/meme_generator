@@ -1,0 +1,14 @@
+{% extends "main.html" %}
+{% block content %}
+
+
+<div>
+<input type="button" class="btn btn-info" value="Choisis ton image" onclick="location.href = 'choixView';">
+<input type="button" class="btn btn-info" value="Upload ton image" onclick="location.href = 'choixuploadView';">
+</div>
+{% endblock %}
+{% block cercle %}
+<img src="assets/media/cercle1.png" class="rounded-circle" />
+            <img src="assets/media/cercle2blanc.png" class="rounded-circle" />
+            <img src="assets/media/cercle3blanc.png" class="rounded-circle" />
+            {% endblock %}
