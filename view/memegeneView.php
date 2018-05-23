@@ -31,8 +31,8 @@
 <form action="generVis.php" method="post">
 
 
-<input type="text" Label="Votre texte" placeholder="Tapez votre texte" name="txt-edit">
-
+<input id="textImage" type="text" Label="Votre texte" placeholder="Tapez votre texte" name="txt-edit">
+<input type="hidden" value= image["adress"] name= "hidden">
   <select name="color">
            <option value="orange">Orange</option>
            <option value="bleu">Bleu</option>
@@ -60,5 +60,17 @@
 <input type="button" class="btn btn-info" value="Générer" onclick="location.href = 'shareView.php';">
 <input type="button" class="btn btn-info" value="Retour" onclick="location.href = 'choixView.php';">
 </div>
+
+
+
+<script>
+
+var textImage = document.querySelector("#textImage");
+textImage.addEventListener("keyup",function (event){
+var texte = document.querySelector("#mImage");
+texte.innerHTML = event.target.value;
+});
+
+</script>
 </body>
 </html>

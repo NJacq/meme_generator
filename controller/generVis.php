@@ -1,6 +1,7 @@
 <?php
 require('../model/model.php');
 
+
 var_dump($_POST);
 
 

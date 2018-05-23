@@ -8,31 +8,31 @@ $dimensions = getimagesize();
 
 // définition des couleurs utilisée
 switch($_POST['color']){
-    case 'orange' : 
+    case 'orange' :
         $color = imagecolorallocate($createdImage, 255, 128, 0);
         break;
 
 
 
-    case 'bleu' : 
+    case 'bleu' :
     $color = imagecolorallocate($createdImage, 0, 0, 255);
     break;
 
 
 
-    case 'bleuclair' : 
+    case 'bleuclair' :
     $color = imagecolorallocate($createdImage, 156, 227, 254);
     break;
 
 
 
-    case 'noir' : 
+    case 'noir' :
     $color = imagecolorallocate($createdImage, 0, 0, 0);
     break;
 
 
 
-    default : 
+    default :
     $color = imagecolorallocate($createdImage, 255, 255, 255);
     break;
 

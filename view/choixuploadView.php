@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="navbar">
-    <img class="logo" src="../assets/media/logo.png"> 
+    <img class="logo" src="../assets/media/logo.png">
 </div>
 
  <div class="container">
