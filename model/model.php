@@ -1,7 +1,7 @@
 <?php
 function getImages()
 {
-$bdd = new PDO('mysql:host=localhost;dbname=meme;charset=utf8','root','D1FRA16ay');
+$bdd = new PDO('mysql:host=localhost;dbname=meme-generator;charset=utf8','root','');
 $response = $bdd->prepare("SELECT id, adress FROM img");
 $response->fetchAll(PDO::FETCH_ASSOC);
 $response->execute();
@@ -10,7 +10,7 @@ return $response;
 
 function getImage($idimage)
 {
-    $db = new PDO('mysql:host=localhost;dbname=meme;charset=utf8' ,'root','D1FRA16ay');
+    $db = new PDO('mysql:host=localhost;dbname=meme-generator;charset=utf8' ,'root','');
 
     $image = $db->prepare('SELECT id, adress FROM img');
     $choix = $idimage;
