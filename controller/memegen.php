@@ -1,14 +1,15 @@
 <?php
+require('model/model.php');
+
 require_once 'vendor/autoload.php';
 
 session_start();
 
 $_SESSION['choixImage']=$_GET['id'];
 
-$image=getImage($_SESSION['choixImage']);
-$url=$image['adress'];
-$img_choice = $image["adress"];
 
+
+$image=getImage($_SESSION['choixImage']);
 
 $imageView = getImage($_SESSION['choixImage']);
 
@@ -19,10 +20,9 @@ $imageView = getImage($_SESSION['choixImage']);
 ));
 
 
-       require('model/model.php');
 
-       $template = $twig->load('memegeneView.php');
-       echo $template->render(array());
+       $template = $twig->load('memegeneView.html');
+       echo $template->render(array('displayImage'=>$imageView));
 
 
 

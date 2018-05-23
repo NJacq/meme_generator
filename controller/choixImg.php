@@ -1,6 +1,5 @@
 <?php
 
-require_once 'vendor/autoload.php';
 
 session_start();
 require_once 'vendor/autoload.php';
@@ -12,10 +11,7 @@ $twig = new Twig_Environment($loader, array(
 
 require('model/model.php');
 
-$images=getImages();
-
-$template = $twig->load('choixbddView.html');
-echo $template->render(array('list'=>$images));
-
+$template = $twig->load('choixImg.html');
+echo $template->render(array());
 
 
