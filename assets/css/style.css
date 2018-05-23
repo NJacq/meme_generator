@@ -1,6 +1,44 @@
 body{
     margin: 0;
 }
+@media only screen and (max-width: 600px){
+    img.logo{
+        width : 200px;
+        height : 200px;
+    }
+    .image-accueil{
+        width : 250px; 
+        height : 250px;
+        margin-left : 40px;
+        vertical-align: middle;
+        display: flex;
+        justify-content: center;
+
+    }
+    .btn{
+        margin-left : 70px;
+        display: flex;
+        justify-content: center;
+    }
+    img{
+        width : 100px; 
+        height : 100px;
+    
+        justify-content: center;
+        margin-left : 40px;
+        padding-bottom:5px;
+    }
+    .h2, h2 {
+        font-size: 18px !important;
+        text-align : center;
+        padding-top : 5px;
+    }
+
+
+}
+
+
+}
 @media screen and (max-width: 640px) {
 .rounded-circle{
     width: 50px;
