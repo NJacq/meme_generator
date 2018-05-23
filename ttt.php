@@ -1,12 +1,12 @@
 <?php
 
-include(memegeneView.php);
+include('memegeneView.php');
 
 
 
-$createdImage = imagecreatefromjpeg("$img_choice");
+$createdImage = imagecreatefromjpeg($img_choice);
 
-$dimensions = getimagesize("$img_choice");
+$dimensions = getimagesize($img_choice);
 
 
 // définition des couleurs utilisée

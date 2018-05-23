@@ -12,7 +12,11 @@ $img_choice = $image["adress"];
 
 $imageView = getImage($_SESSION['choixImage']);
 
-require('view/memegeneView.php');
+       $imageView = getImage($_SESSION['choixImage']);
+
+var_dump($imageView);
+
+    require('view/memegeneView.php');
 
 
 
