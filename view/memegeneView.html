@@ -1,4 +1,26 @@
-{% extends "main.html" %} {% block content %}
+{% extends "main.html" %}
+
+{% block content %}
+<form class="formulaire" action="generVis" method="post">
+<input id="textImage" type="text" Label="Votre texte" placeholder="Tapez votre texte" name="txt-edit">
+<input type="hidden" value= image["adress"] name= "hidden">
+  <select name="color">
+           <option value="orange">Orange</option>
+           <option value="bleu">Bleu</option>
+           <option value="bleuclair">Bleu clair</option>
+           <option value="noir">Noir</option></option>
+           <option value="blanc">Blanc</option>
+       </select>
+
+         <select name="size">
+           <option value="50">Petit</option>
+           <option value="80">Moyen</option>
+           <option value="100">Grand</option></option>
+           <option value="140">Trés grand</option>
+
+
+       </select>
+<input class="btn-info" type="submit">
 
 
 
