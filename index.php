@@ -37,7 +37,7 @@ require_once('controller/list.php');
 
 break;
 
-case 'uploadImg':
+case 'upload':
 require_once('controller/uploadCtrl.php');
 
 break;
