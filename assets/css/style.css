@@ -5,6 +5,11 @@ body{
     div.row{
        margin-right : 5px;
     }
+    div.mImage{
+        position : relative;
+        height: 200px;
+        background-size: cover;
+    }
     .formulaire{
         margin-left : 30px;
         align-items: center;
@@ -12,13 +17,33 @@ body{
        
     }
     button, select {
-        text-transform: none;
-        margin-top: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+    
+        color: grey;
       
+        padding: 5px 5px;
+        border: 2px;
+        border-color: grey;
+       
+    }
+     input#textImage{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+       
+        color: grey;
+        text-transform: uppercase;
+        margin-top: 5px;
+        margin-bottom : 5px;
+        padding: 5px 25px;
+        border: 2px;
+        border-color: grey;
+        
 
     }
-    img.mImage{
-        width : 200px;
+    div.img{
+        position : relative;;
+
     }
     
  
