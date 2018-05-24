@@ -1,33 +1,38 @@
-{% extends "main.html" %}
-{% block content %}
+{% extends "main.html" %} {% block content %}
 
 
 <form name="inscription" method="post" action="memegeneView">
-<div class="list">
+    <div class="container">
+        <div class="row objetCentr">
 
 
-{% for image in list %}
+            {% for image in list %}
 
-<div class="images">
-    <p><a href="memegen/{{image.id}}/"><img src="{{image.adress}}" style="cursor:pointer" witdh="300" height="300"></a></p>
-</div>
-{% endfor %}
+            <div class="images">
+                <p>
+                    <a href="memegen/{{image.id}}/">
+                        <img src="{{image.adress}}" style="cursor:pointer" witdh="300" height="300">
+                    </a>
+                </p>
+            </div>
+            {% endfor %}
 
 
 
 
-<p id="list"></p>
+            <div class="container">
+                <div class="row objetCentr">
+                    <div class="text-center">
+                        <input type="button" class="btn btn-info" value="Retour" onclick="location.href = 'choixImg';">
+                    </div>
+                </div>
+            </div>
 
-<div>
-    <input type="button" class="btn btn-info" value="Retour" onclick="location.href = 'choixImg';">
-</div>
 
 
 
 </form>
-{% endblock %}
-{% block cercle %}
+{% endblock %} {% block cercle %}
 <img src="assets/media/cercle1.png" class="rounded-circle" />
-            <img src="assets/media/cercle2blanc.png" class="rounded-circle" />
-            <img src="assets/media/cercle3blanc.png" class="rounded-circle" />
-            {% endblock %}
+<img src="assets/media/cercle2blanc.png" class="rounded-circle" />
+<img src="assets/media/cercle3blanc.png" class="rounded-circle" /> {% endblock %}

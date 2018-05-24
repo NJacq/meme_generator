@@ -1,124 +1,119 @@
 body{
     margin: 0;
 }
-@media only screen and (max-width: 600px){
-    div.row{
-       margin-right : 5px;
-    }
-    .formulaire{
-        margin-left : 30px;
-        align-items: center;
-        justify-content: center;
+.no-gutters{
+    margin-right: 0;
+    margin-left: 0;
+}
+.objetCentr{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.imgProgress{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.btn{
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mImage{
+    display: inline-block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    }
-    button, select {
+.formulaire{
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+@media only screen and (max-width: 575px){
+
+    
+    /* button, select {
         text-transform: none;
         margin-top: 20px;
 
 
+    } */
+    .memegene{
+        display: block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
     img.mImage{
         width : 200px;
     }
-
-
-    body{
-        align-items: center;
-        justify-content: center;
-
-    }
-    .rounded-circle{
-        width: 50px;
-        height: 50px;
+ 
+    img.rounded-circle{
+        width: 60px;
+        height: 60px;
         margin-bottom: 50px;
 
     }
-    .list{
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-
-
+    
     img.logo{
         width : 200px;
         height : 200px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto
 
     }
     .image-accueil{
         width : 250px;
         height : 250px;
-        margin-left : 40px;
-        vertical-align: middle;
-        display: flex;
-        justify-content: center;
-        padding-top : 5px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
 
     }
     .btn-info {
         color: #fff;
         background-color: #17a2b8;
         border-color: #17a2b8;
-        width : 100px;
+        width : 200px;
         height : 40px;
-        margin-bottom : 5px;
+        margin-bottom : 20px;
+        margin-top : 20px;
 
     }
-    .btn{
-        margin-left : 70px;
-        display: flex;
-        justify-content: center;
-        padding : 20px;
-    }
+    
     img{
-        width : 100px;
-        height : 100px;
-
+        width : 200px;
+        height : 200px;
         justify-content: center;
-        margin-left : 40px;
-        padding-bottom:5px;
+
     }
     .h2, h2 {
         font-size: 18px !important;
         text-align : center;
         padding-top : 5px;
     }
-    .btn-info{
-        margin-top: 15px;
-
-    }
     .fileUpload{
         text-align: center;
     }
-
-
-}
-
-
-
-@media screen and (max-width: 640px) {
-.rounded-circle{
-    width: 50px;
-    height: 50px;
-    margin-bottom: 50px;
-
-}
-.list{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-}
-@media screen and (min-width: 1200px) {
-    body{
-        margin: 0;
-        display: flex;
-        flex-direction: row;
-        flex-direction: column-reverse;
-        flex-direction: column;
-
-
+    .imgGene{
+        width: 350px;
+        height: 350px;
     }
+
+
+}
+
+
+
+
+@media screen and (min-width: 1200px) {
     .image-accueil{
         width : 250px;
         height : 250px;
@@ -133,27 +128,10 @@ body{
         height : 200px;
 
     }
-    .image-accueil{
-        width : 250px;
-        height : 250px;
-        margin-left : 40px;
-        vertical-align: middle;
-        display: flex;
-        justify-content: center;
-        padding-top : 5px;
-
-    }
-    .btn{
-        margin-left : 70px;
-        display: flex;
-        justify-content: center;
-    }
     img{
-        width : 100px;
-        height : 100px;
-
+        width : 400px;
+        height : 400px;
         justify-content: center;
-        margin-left : 40px;
         padding-bottom:5px;
     }
     .h2, h2 {
@@ -171,14 +149,6 @@ body{
         height: 150px;
         margin-bottom: 50px;
 
-    }
-    h2{
-        text-align: center;
-    }
-    .list{
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
     }
     .images{
         display: block;
@@ -216,6 +186,9 @@ body{
         .custom-span{ font-family: Arial; font-weight: bold;font-size: 100px; color: #FE57A1}
         #uploadFile{border: none;margin-left: 10px; width: 200px;}
         .custom-para{font-family: arial;font-weight: bold;font-size: 24px;}
+    }
+    .typeText{
+        width: 200px;
     }
     .facebook{
         width: 90px;

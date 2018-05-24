@@ -1,54 +1,62 @@
-{% extends "main.html" %}
+{% extends "main.html" %} {% block content %}
 
-{% block content %}
+
+
 <form class="formulaire" action="generVis" method="post">
-<input id="textImage" type="text" Label="Votre texte" placeholder="Tapez votre texte" name="txt-edit">
-<input type="hidden" value= image["adress"] name= "hidden">
-  <select name="color">
-           <option value="orange">Orange</option>
-           <option value="bleu">Bleu</option>
-           <option value="bleuclair">Bleu clair</option>
-           <option value="noir">Noir</option></option>
-           <option value="blanc">Blanc</option>
-       </select>
+  <div class="container">
+    <div class="row">
+      <div class="mImage col-12 col-xl-6">
+        <img class="imgGene" src="{{displayImage.adress}}" witdh="300" height="300">
+      </div>
 
-         <select name="size">
-           <option value="1">Trés petit</option>
-           <option value="2">Petit</option>
-           <option value="3">Moyen</option>
-           <option value="4">Grand</option></option>
-           <option value="5">Trés grand</option>
+      <div class="col-12 col-xl-6>">
+        <input class="typeText" id="textImage" type="text" Label="Votre texte" placeholder="Tapez votre texte" name="txt-edit">
+        <input type="hidden" value=i mage[ "adress"] name="hidden">
+        <select name="color">
+          <option value="orange">Orange</option>
+          <option value="bleu">Bleu</option>
+          <option value="bleuclair">Bleu clair</option>
+          <option value="noir">Noir</option>
+          </option>
+          <option value="blanc">Blanc</option>
+        </select>
 
+        <select name="size">
+          <option value="1">Trés petit</option>
+          <option value="2">Petit</option>
+          <option value="3">Moyen</option>
+          <option value="4">Grand</option>
+          </option>
+          <option value="5">Trés grand</option>
 
-       </select>
-<input class="btn-info" type="submit">
+        </select>
+        <input class="btn-info" type="submit">
+      </div>
+    </div>
+  </div>
 
-
-<div class="mImage">
-<img src="{{displayImage.adress}}" witdh="300" height="300">
-
-</div>
-
-<div>
-<input type="button" class="btn btn-info" value="Générer" onclick="location.href = 'shareView';">
-<input type="button" class="btn btn-info" value="Retour" onclick="location.href = 'choixView';">
-</div>
-
-
+      <div class="container">
+        <div class="row objetCentr">
+          <div class="col-12 text-center">
+            <input type="button" class="btn btn-info" value="Générer" onclick="location.href = 'share';">
+            <input type="button" class="btn btn-info" value="Retour" onclick="location.href = 'choixView';">
+          </div>
+        </div>
+      </div>
+   
 </form>
+
+
+
 <script>
-
-var textImage = document.querySelector("#textImage");
-textImage.addEventListener("keyup",function (event){
-var texte = document.querySelector("#mImage");
-texte.innerHTML = event.target.value;
-});
-
+  var textImage = document.querySelector("#textImage");
+  textImage.addEventListener("keyup", function (event) {
+    var texte = document.querySelector("#mImage");
+    texte.innerHTML = event.target.value;
+  });
 </script>
 
-{% endblock %}
-{% block cercle %}
+{% endblock %} {% block cercle %}
 <img src="assets/media/cercle1.png" class="rounded-circle" />
-<img src="assets/media/cercle2.png"  class="rounded-circle" />
-<img src="assets/media/cercle3blanc.png" class="rounded-circle" />
-{% endblock %}
+<img src="assets/media/cercle2.png" class="rounded-circle" />
+<img src="assets/media/cercle3blanc.png" class="rounded-circle" /> {% endblock %}
