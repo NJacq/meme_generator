@@ -1,6 +1,10 @@
 <?php
 require('model/model.php');
-
+require_once 'vendor/autoload.php';
+$loader = new Twig_Loader_Filesystem('view');
+$twig = new Twig_Environment($loader, array(
+    'cache' => false,
+));
 session_start();
 
 
@@ -39,13 +43,13 @@ session_start();
      break;
 
  }
- $font = '/assets/font/Roboto-Black.ttf';
+ $font = 'assets/font/Roboto-Black.ttf';
  $text_box = imagettfbbox($_POST['size'], 0, $font, $_POST['txt-edit']);
  $text_width = $text_box[2]-$text_box[0];
  $text_heigth = $text_box[7]-$text_box[1];
 
  $x =($dimensions[0]/2)-($text_width/2);
-//  $y 
+//  $y
 $y= 100;
 
  imagettftext($createdImage, $_POST['size'], 0,  $x, $y, $color, $font, $_POST['txt-edit']);
@@ -57,4 +61,10 @@ $y= 100;
 
  imagejpeg($createdImage, $save);
 
+
+ $template = $twig->load('memegeneView.html');
+ echo $template->render(array('displayImage'=>$imageView));
+
  require('view/ttt.php');
+
+
