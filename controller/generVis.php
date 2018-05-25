@@ -52,7 +52,7 @@ session_start();
 //  $y
 $y= 100;
 
- imagettftext ($createdImage, $_POST['size'], 0,  $x, $y, $color, $font, $_POST['txt-edit']);
+ imagettftext($createdImage, $_POST['size'], 0,  $x, $y, $color, $font, $_POST['txt-edit']);
 
  // imagestring($createdImage, $_POST['size'], $dimensions[0]/2, 0, $_POST['txt-edit'], $color);
  $droot = $_SERVER['DOCUMENT_ROOT']."/meme_generator/";
