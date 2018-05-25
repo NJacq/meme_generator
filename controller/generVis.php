@@ -51,5 +51,5 @@ session_start();
 
  require('view/ttt.php');
 
-require('view/ttt.php');
+
 
