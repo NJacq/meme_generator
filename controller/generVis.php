@@ -40,8 +40,15 @@ session_start();
 
  }
  $font = '/assets/font/Roboto-Black.ttf';
+ $text_box = imagettfbbox($_POST['size'], 0, $font, $_POST['txt-edit']);
+ $text_width = $text_box[2]-$text_box[0];
+ $text_heigth = $text_box[7]-$text_box[1];
 
- imagettftext ($createdImage, $_POST['size'], 0, 50, 59, $color, $font, $_POST['txt-edit']);
+ $x =($dimensions[0]/2)-($text_width/2);
+//  $y 
+$y= 100;
+
+ imagettftext ($createdImage, $_POST['size'], 0,  $x, $y, $color, $font, $_POST['txt-edit']);
 
  // imagestring($createdImage, $_POST['size'], $dimensions[0]/2, 0, $_POST['txt-edit'], $color);
  $droot = $_SERVER['DOCUMENT_ROOT']."/meme_generator/";
