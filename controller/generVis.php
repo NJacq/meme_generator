@@ -39,7 +39,7 @@ session_start();
      break;
 
  }
- $font = 'Roboto-Black.ttf';
+ $font = '../Roboto-Black.ttf';
  imagettftext ($createdImage, $_POST['size'], 0, $dimensions[0]/2, $dimensions[1]/2, $color, $font, $_POST['txt-edit']);
 
  // imagestring($createdImage, $_POST['size'], $dimensions[0]/2, 0, $_POST['txt-edit'], $color);
@@ -51,5 +51,5 @@ session_start();
 
  require('view/ttt.php');
 
-require('view/ttt.php');
+
 
