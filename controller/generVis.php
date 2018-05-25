@@ -1,6 +1,6 @@
 <?php
 require('model/model.php');
-
+require_once 'vendor/autoload.php';
 session_start();
 
 
@@ -39,8 +39,9 @@ session_start();
      break;
 
  }
- $font = '../Roboto-Black.ttf';
- imagettftext ($createdImage, $_POST['size'], 0, $dimensions[0]/2, $dimensions[1]/2, $color, $font, $_POST['txt-edit']);
+ $font = 'assets/font/Roboto-Black.ttf';
+
+ imagettftext ($createdImage, $_POST['size'], 0, 50, 59, $color, $font, $_POST['txt-edit']);
 
  // imagestring($createdImage, $_POST['size'], $dimensions[0]/2, 0, $_POST['txt-edit'], $color);
  $droot = $_SERVER['DOCUMENT_ROOT']."/meme_generator/";
@@ -49,7 +50,10 @@ session_start();
 
  imagejpeg($createdImage, $save);
 
- require('view/ttt.php');
 
+ $template = $twig->load('memegeneView.html');
+ echo $template->render(array('displayImage'=>$imageView));
+
+ require('view/ttt.php');
 
 
